@@ -1,0 +1,40 @@
+header {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    font-size: 3.5rem;
+    height: 100%;
+    width: 100%;
+    .header-info-container {
+        width: 90%;
+    }
+    .cancel-quiz-container {
+        width: 10%;
+        min-width: 4rem;
+        display: flex;
+        justify-content: center;
+        button {
+            background-color: var(--transparent);
+            background-repeat: no-repeat;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            outline: none;
+            color: inherit;
+            .cancel-quiz:after {
+                display: inline-block;
+                content: "\00d7";
+                font-size: 2.8rem;
+            }
+        }
+    }
+}
+
+.primary-background {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.transparent-background {
+    background-color: var(--transparent);
+}

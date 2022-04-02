@@ -1,0 +1,12 @@
+<header [ngClass]="(location === pages.questions) ? 'primary-background' : 'transparent-background'">
+    <div class="header-info-container">
+        <div class="info">
+            {{ questionCounter }}
+        </div>
+    </div>
+    <div class="cancel-quiz-container">
+        <button>
+            <div [ngClass]="(location === pages.result ) ? 'text-color' : 'light-color' " class="cancel-quiz "></div>
+        </button>
+    </div>
+</header>
