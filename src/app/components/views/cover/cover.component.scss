@@ -1,65 +1,75 @@
 .cover-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
     justify-content: center;
-    height: 100%;
-    margin: 0 .6rem;
-    border: 2px solid red;
-    .cover-img {
-        display: flex;
-        justify-content: center;
-        max-width: 10rem;
-        img {
-            width: 80%;
-            height: auto;
-        }
-    }
-    .cover-content {
+    height         : 100%;
+    margin         : 0 .6rem;
+
+    .content{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         height: 100%;
-        width: 100%;
-        .info-1 {
-            flex-grow: .5;
-            text-align: center;
-            color: var(--heading);
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin: 2rem 1rem 1.5rem 1rem;
-        }
-        .info-2 {
-            flex-grow: 1;
-            text-align: center;
-            font-size: .8rem;
-        }
-        .line1::after {
-            content: "\a";
-            white-space: pre;
-        }
-        .line-2::before {
-            content: "\a";
-            white-space: pre;
-        }
-        .start-btn-container {
-            flex-grow: 2;
-            display: flex;
-            width: 100%;
-            button {
-                align-self: flex-end;
-                display: block;
-                width: 100%;
-                border: none;
-                background-color: var(--primary);
-                border-radius: 2.5px;
-                color: var(--light);
-                padding: .9rem 1.8rem;
-                font-size: 1rem;
-                font-weight: 600;
-                cursor: pointer;
-                text-align: center;
+        .cover-img {
+            display        : flex;
+            justify-content: center;
+            align-items: center;
+            max-width      : 10rem;
+            min-height: 40%;           
+            img {
+                width : 75%;
+                height: auto;
             }
         }
+        .text-container  {
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            .text-1 {
+                text-align : center;
+                color      : var(--heading);
+                font-weight: 600;
+                font-size  : 1.1rem;
+                margin     : 2rem 1rem 1.5rem 1rem;
+                margin-bottom: 2.5rem;                
+            }
+            .text-2 {
+                text-align: center;
+                font-size : .8rem;
+                
+            }
+        }       
     }
+    .start-btn-container {
+        display  : flex;
+        width    : 100%;
+        button {
+            align-self      : flex-end;
+            display         : block;
+            width           : 100%;
+            border          : none;
+            background-color: var(--primary);
+            border-radius   : 2.5px;
+            color           : var(--light);
+            padding         : .9rem 1.8rem;
+            font-size       : 1rem;
+            font-weight     : 600;
+            cursor          : pointer;
+            text-align      : center;
+        }
+    }  
+    
+}
+
+
+.line1::after {
+    content    : "\a";
+    white-space: pre;
+}
+.line-2::before {
+    content    : "\a";
+    white-space: pre;
 }
