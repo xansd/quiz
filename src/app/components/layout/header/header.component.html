@@ -9,7 +9,9 @@
     <div class="cancel-quiz-container">
         <button>
             <!-- Modificamos la clase del botón de cancelación en función de la vista en la que nos encontremos -->
-            <div (click)="cancelQuiz()" [ngClass]="(activeRoute === '/' + pages.result ) ? 'text-color' : 'light-color' " class="cancel-quiz"></div>
+            <div (click)="cancelQuiz()"
+                [ngClass]="(activeRoute === '/' + pages.result ) ? 'text-color' : 'light-color' " class="cancel-quiz">
+            </div>
         </button>
     </div>
 </header>

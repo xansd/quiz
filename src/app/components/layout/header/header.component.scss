@@ -50,3 +50,50 @@ header {
 .transparent-background {
     background-color: var(--transparent);
 }
+
+
+// TABLET
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+
+        .header-info-container {
+
+            .info {
+                font-size: 2rem;
+            }
+        }
+
+        .cancel-quiz-container {
+
+            button {
+
+                .cancel-quiz:after {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+}
+
+// DESKTOP
+@media (min-width: 1025px) {
+    header {
+
+        .header-info-container {
+
+            .info {
+                font-size: 2.2rem;
+            }
+        }
+
+        .cancel-quiz-container {
+
+            button {
+
+                .cancel-quiz:after {
+                    font-size: 2.6rem;
+                }
+            }
+        }
+    }
+}

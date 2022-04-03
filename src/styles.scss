@@ -11,9 +11,9 @@ body {
     font-family     : Roboto, "Helvetica Neue", sans-serif;
     background-color: var(--background);
     color           : var(--text);
-    border          : .3rem solid #000;
-    border-radius   : 5px;
+    border          : 4px solid #000;
     box-sizing      : border-box;
+    overflow-y: auto;
 }
 
 h1,
@@ -37,6 +37,10 @@ app-content {
     grid-area: content;
 }
 
+app-footer {
+    grid-area: footer;
+}
+
 .layout {
     display              : grid;
     row-gap              : 0;
@@ -45,6 +49,7 @@ app-content {
     grid-template-columns: 1fr;
     grid-template-areas  : "header" "content" "footer";
 }
+
 
 
 /* COLORS */

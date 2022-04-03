@@ -8,7 +8,7 @@ import { ResultComponent } from './components/views/result/result.component';
 const routes: Routes = [
   { 
     path: '',
-    redirectTo: '/' + Pages.cover,
+    redirectTo: '/' + Pages.result,
     pathMatch: 'full'   
   },
   { 
