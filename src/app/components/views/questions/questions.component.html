@@ -1,1 +1,19 @@
-<p>questions works!</p>
+<div class="questions-container" *ngIf="!isLoading">
+    <div class="question">
+        {{ questions[quizState.active - 1].question }}
+        <hr>
+    </div>
+   <div class="images-container" >
+      <div
+      [ngClass]="{'selected': selectedResponse === i }"
+      [@inOutAnimation]
+      *ngFor="let item of questions[quizState.active - 1].answers; let i=index"
+      class="response"
+      (click)="selectAnswer(item, i)">
+        <img [src]="item.image" [alt]="'imagen de ' + item.text">
+        <div class="caption">
+            <p>{{ item.text }}</p>
+        </div>
+      </div> 
+    </div>
+</div>

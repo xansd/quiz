@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ResultsService } from 'src/app/services/results.service';
+import { Pages } from '../../../models/pages';
 
 @Component({
   selector: 'app-cover',
@@ -7,13 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoverComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private resultsService: ResultsService
+    ) { }
 
   ngOnInit(): void {
   }
 
+  // Guarda el momento de comienzo del quiz y accede a la vista de preguntas
   startQuiz(): void {
-    
+    this.resultsService.start();
+    this.router.navigateByUrl(Pages.questions);
   }
 
 }

@@ -1,12 +1,15 @@
-<header [ngClass]="(location === pages.questions) ? 'primary-background' : 'transparent-background'">
+<!-- Modificamos la clase del header en función de la vista en la que nos encontremos -->
+<header [ngClass]="(activeRoute === '/' + pages.questions) ? 'primary-background' : 'transparent-background'">
     <div class="header-info-container">
-        <div class="info">
-            {{ questionCounter }}
+        <!-- Solo mostramos el indicador de pruguntas si estamos en la vista de preguntas y si el total de preguntas es mayor de cero -->
+        <div class="info" *ngIf="totalQuestions > 0 && activeRoute === '/' + pages.questions">
+            {{ currentQuestion }}/{{ totalQuestions }}
         </div>
     </div>
     <div class="cancel-quiz-container">
         <button>
-            <div [ngClass]="(location === pages.result ) ? 'text-color' : 'light-color' " class="cancel-quiz "></div>
+            <!-- Modificamos la clase del botón de cancelación en función de la vista en la que nos encontremos -->
+            <div (click)="cancelQuiz()" [ngClass]="(activeRoute === '/' + pages.result ) ? 'text-color' : 'light-color' " class="cancel-quiz"></div>
         </button>
     </div>
 </header>

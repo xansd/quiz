@@ -5,8 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class ResultsService {
 
+  // Objeto que guarda el reultado del quiz (puntuación y tiempo empleado)
   result: {score: number, totalTime: any} = {score: 0, totalTime: undefined};
+  // Momento en el que comienza el quiz en milisegundos
   startTime: any;
+  // Momento en el que finaliza el quiz en milisigundos
   endTime: any;
 
   constructor() { }
@@ -21,12 +24,12 @@ export class ResultsService {
     return this.result;
   }
 
-  // Comienza el contador del quiz
+  // Guarda el momento en que comienza el contador del quiz
   start(): void {
     this.startTime = new Date();
   }
 
-  // Finaliza el contador del quiz
+  // Guarda el momento en que finaliza el contador del quiz formateado
   end(): void {
     this.endTime = new Date();
     this.result.totalTime = (this.endTime - this.startTime);
@@ -40,7 +43,7 @@ export class ResultsService {
     return this.result.totalTime;
   }
 
-  // Resetea el estado del quiz (contador y puntuaciones)
+  // Resetea el estado del quiz 
   reset(): void {
     this.result.score = 0;
     this.result.totalTime = undefined;
