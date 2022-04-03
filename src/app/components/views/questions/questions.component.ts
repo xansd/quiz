@@ -5,10 +5,10 @@ import { takeUntil } from 'rxjs/operators';
 import { Questions } from '../../../models/questions';
 import { ShareDataService } from '../../../services/share-data.service';
 import { ResultsService } from '../../../services/results.service';
-import { Answers } from 'src/app/models/answers';
+import { Answers } from '../../../models/answers';
 import { trigger, style, animate, transition } from '@angular/animations';
 import { Router } from '@angular/router';
-import { Pages } from 'src/app/models/pages';
+import { Pages } from '../../../models/pages';
 
 @Component({
   selector: 'app-questions',
