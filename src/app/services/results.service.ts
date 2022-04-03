@@ -33,7 +33,7 @@ export class ResultsService {
     this.formatTime();
   }
 
-  // Recibe tiempo en milsegundos y retorna string en formato "mm:ss"
+  // Recibe tiempo en milsegundos y retorna un string en formato "mm:ss"
   formatTime(): string {
     this.result.totalTime =  Math.floor(this.result.totalTime/(1000*60))%60 + ":" + Math.floor(this.result.totalTime/1000)%60;
     this.result.totalTime = this.result.totalTime.replace(/(^|\D)(\d)(?!\d)/g, '$10$2');
